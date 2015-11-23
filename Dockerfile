@@ -42,4 +42,4 @@ USER paad
 WORKDIR /home/paad
 
 # Install SageMathCell
-#RUN sagecell install
+RUN sagecell install
