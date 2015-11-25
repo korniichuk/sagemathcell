@@ -38,7 +38,7 @@ RUN apt-get install -y openssh-server
 # Add 'paad' user
 RUN useradd -c "PAAD" -m paad
 
-# Setup sudo for cmd exec w/o password
+# Setup sudo w/o password for 'paad' user
 RUN echo "paad ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Change password for 'paad' user
