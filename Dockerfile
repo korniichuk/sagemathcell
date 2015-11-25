@@ -1,4 +1,4 @@
-# Version: 0.1a2
+# Version: 0.1a3
 # SageMathCell
 # The ubuntu:trusty Docker image with the SageMathCell.
 
@@ -32,11 +32,17 @@ RUN apt-get install -y git
 # Install sagecell from GitHub
 RUN pip install git+git://github.com/korniichuk/sagecell#egg=sagecell
 
+# Install openssh-server
+RUN apt-get install -y openssh-server
+
 # Add 'paad' user
 RUN useradd -c "PAAD" -m paad
 
 # Setup sudo for cmd exec w/o password
 RUN echo "paad ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+# Change password for 'paad' user
+RUN echo 'paad:paad' | chpasswd
 
 USER paad
 WORKDIR /home/paad
