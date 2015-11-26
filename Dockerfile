@@ -49,3 +49,6 @@ WORKDIR /home/paad
 
 # Install SageMathCell
 RUN sagecell install
+
+# Expose a port
+EXPOSE 8888
