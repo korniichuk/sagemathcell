@@ -1,4 +1,4 @@
-# Version: 0.1a3
+# Version: 0.1a4
 # SageMathCell
 # The ubuntu:trusty Docker image with the SageMathCell.
 
