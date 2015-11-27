@@ -10,4 +10,4 @@ def git():
 
     local("git remote rm origin")
     local("git remote add origin https://korniichuk@github.com/korniichuk/sagemathcell.git")
-    local("git remote add bitbucket https://korniichuk@github.com/korniichuk/sagemathcell.git")
+    local("git remote add bitbucket https://korniichuk@bitbucket.org/korniichuk/sagemathcell.git")
