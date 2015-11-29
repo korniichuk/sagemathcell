@@ -1,6 +1,7 @@
+# Name: korniichuk/sagemathcell
+# Short Description: SageMathCell
+# Full Description: The ubuntu:trusty Docker image with the SageMathCell.
 # Version: 0.1a4
-# SageMathCell
-# The ubuntu:trusty Docker image with the SageMathCell.
 
 FROM ubuntu:trusty
 
