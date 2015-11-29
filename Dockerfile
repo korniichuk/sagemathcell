@@ -54,10 +54,3 @@ RUN sagecell install
 
 # Expose a port
 EXPOSE 8888
-
-# Fix socket error
-#RUN sudo apt-get install socket
-#RUN sudo socket -blfq -s /dev/log
-#VOLUME ["/dev/log"]
-#RUN sudo chmod 777 /dev/log
-#RUN sudo chown paad /dev/log
