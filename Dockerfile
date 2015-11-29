@@ -9,8 +9,9 @@ MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 
 USER root
 
-# Update OS
-RUN apt-get update
+# Retrieve new lists of packages
+ENV REFRESHED_AT 2015–11–29
+RUN apt-get -qq update # -qq -- no output except for errors
 
 # Install python, python-dev
 RUN apt-get install -y python python-dev
@@ -60,5 +61,3 @@ EXPOSE 8888
 #VOLUME ["/dev/log"]
 #RUN sudo chmod 777 /dev/log
 #RUN sudo chown paad /dev/log
-
-ADD http://icse.us.edu.pl/icse/wp-content/uploads/us_pantone_logo_no_borders_300px.png us_pantone_logo_no_borders_300px.png
