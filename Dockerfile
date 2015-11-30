@@ -62,3 +62,5 @@ RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 # Copy the 'sagemathcellscript' file to the filesystem of the container
 COPY sagemathcellscript sagemathcellscript
 RUN sudo chmod 755 sagemathcellscript
+
+CMD ./sagemathcellscript
