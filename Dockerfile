@@ -10,7 +10,7 @@ MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 USER root
 
 # Retrieve new lists of packages
-ENV REFRESHED_AT 2015–11–29
+ENV REFRESHED_AT 2015–11–30
 RUN apt-get -qq update # -qq -- no output except for errors
 
 # Install python, python-dev
@@ -47,7 +47,7 @@ RUN useradd -c "PAAD" -m paad
 RUN echo "paad ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Change password for 'paad' user
-RUN echo 'paad:paad' | chpasswd
+RUN echo "paad:paad" | chpasswd
 
 USER paad
 WORKDIR /home/paad
