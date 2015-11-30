@@ -37,6 +37,9 @@ RUN pip install git+git://github.com/korniichuk/sagecell#egg=sagecell
 # Install openssh-server
 RUN apt-get install -y openssh-server
 
+# Install socket
+RUN apt-get install socket
+
 # Add 'paad' user
 RUN useradd -c "PAAD" -m paad
 
