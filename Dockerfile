@@ -54,3 +54,7 @@ RUN sagecell install
 
 # Expose a port
 EXPOSE 8888
+
+# Setup SSH for auto login to localhost without a password
+RUN ssh-keygen -t rsa -b 4096 -N '' -f ~/.ssh/id_rsa
+RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
