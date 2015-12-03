@@ -66,4 +66,7 @@ RUN cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 COPY sagemathcellscript sagemathcellscript
 RUN sudo chmod 755 sagemathcellscript
 
+# Disable the terms of service requirement
+COPY config.py /home/paad/sc_build/sagecell/config.py
+
 CMD ./sagemathcellscript
