@@ -11,6 +11,6 @@ The `korniichuk/sagemathcell <https://hub.docker.com/r/korniichuk/sagemathcell/>
 
 Quickstart
 ==========
-The following command starts a container with the SageMathCell listening for HTTP connections on port 8888::
+The following command starts a container with the SageMathCell listening for HTTP connections on port 6363::
 
-    $ docker run -d -p 8888:8888 korniichuk/sagemathcell
+    $ docker run -d -p 6363:6363 korniichuk/sagemathcell

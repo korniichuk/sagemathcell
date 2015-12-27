@@ -1,7 +1,7 @@
 # Name: korniichuk/sagemathcell
 # Short Description: SageMathCell
 # Full Description: The ubuntu:trusty Docker image with the SageMathCell.
-# Version: 0.1a4
+# Version: 0.1b2
 
 FROM ubuntu:trusty
 
@@ -10,7 +10,7 @@ MAINTAINER Ruslan Korniichuk <ruslan.korniichuk@gmail.com>
 USER root
 
 # Retrieve new lists of packages
-ENV REFRESHED_AT 2015–11–30
+ENV REFRESHED_AT 2015–12–28
 RUN apt-get -qq update # -qq -- no output except for errors
 
 # Install python, python-dev
@@ -56,7 +56,7 @@ WORKDIR /home/paad
 RUN sagecell install
 
 # Expose a port
-EXPOSE 8888
+EXPOSE 6363
 
 # Setup SSH for auto login to localhost without a password
 RUN ssh-keygen -t rsa -b 4096 -N '' -f ~/.ssh/id_rsa
