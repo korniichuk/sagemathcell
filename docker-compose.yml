@@ -1,0 +1,4 @@
+sagemathcell:
+  image: korniichuk/sagemathcell:6.9b6
+  ports:
+   - 6363:6363
